@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
-chown --from=vincent betty hello
-=======
-sudo chown --from=vincent betty hello
->>>>>>> f72570159fe5caa89c8c89e1fc2b09d05a8864d1
+if [ "$(stat -c %U hello)" = "guillaume" ]; then sudo chown vincent hello; fi
